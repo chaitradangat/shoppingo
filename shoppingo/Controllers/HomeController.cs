@@ -34,9 +34,11 @@ namespace shoppingo.Controllers
             return View();
         }
 
+        public ActionResult Browse(string productcategory)
+        {
+            ViewData["productcategory"] = productcategory;
 
-
-
-
+            return View();
+        }
     }
 }
