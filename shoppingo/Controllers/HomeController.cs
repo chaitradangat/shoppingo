@@ -8,8 +8,11 @@ namespace shoppingo.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
+            ViewData["id"] = id;
+
+
             return View();
         }
 
@@ -23,20 +26,6 @@ namespace shoppingo.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult Welcome()
-        {
-            ViewData["productid"] = RouteData.Values["id"];
-
-            return View();
-        }
-
-        public ActionResult Browse(string productcategory)
-        {
-            ViewData["productcategory"] = productcategory;
 
             return View();
         }

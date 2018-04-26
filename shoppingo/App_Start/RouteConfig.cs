@@ -18,14 +18,6 @@ namespace shoppingo
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute("Default1",
-                "{controller}/{action}/{id}",
-                 new { controller = "Home",action="Welcome",id = UrlParameter.Optional }
-                );
-
-
-
         }
     }
 }
